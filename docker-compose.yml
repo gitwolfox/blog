@@ -14,8 +14,8 @@ services:
 #      - --character-set-server=utf8
 #      - --collation-server=utf8_general_ci
     environment:
-      - MYSQL_DATABASE=djangoblog
-      - MYSQL_ROOT_PASSWORD=DjAnGoBlOg!2!Q@W#E
+      - MYSQL_DATABASE=blog
+      - MYSQL_ROOT_PASSWORD=DjAnGoBlOg!2##￥%
     ports:
       - 3306:3306
     volumes:
@@ -34,9 +34,9 @@ services:
       - ./collectedstatic:/code/djangoblog/collectedstatic
       - ./logs:/code/djangoblog/logs
     environment:
-      - DJANGO_MYSQL_DATABASE=djangoblog
+      - DJANGO_MYSQL_DATABASE=blog
       - DJANGO_MYSQL_USER=root
-      - DJANGO_MYSQL_PASSWORD=DjAnGoBlOg!2!Q@W#E
+      - DJANGO_MYSQL_PASSWORD=DjAnGoBlOg!2##￥%
       - DJANGO_MYSQL_HOST=db
       - DJANGO_MYSQL_PORT=3306
       - DJANGO_REDIS_URL=redis:6379
