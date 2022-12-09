@@ -1,6 +1,6 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
-WORKDIR /code/djangoblog/
+WORKDIR /root/blog/
 RUN  apt-get install  default-libmysqlclient-dev -y && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 ADD requirements.txt requirements.txt
@@ -10,5 +10,5 @@ RUN pip install --upgrade pip  && \
         pip cache purge
         
 ADD . .
-RUN chmod +x /code/djangoblog/bin/docker_start.sh
-ENTRYPOINT ["/code/djangoblog/bin/docker_start.sh"]
+RUN chmod +x /root/blog/bin/docker_start.sh
+ENTRYPOINT ["/root/blog/bin/docker_start.sh"]
