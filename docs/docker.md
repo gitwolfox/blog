@@ -15,6 +15,8 @@ docker run -d  -p 8000:8000 -e DJANGO_MYSQL_HOST=mysqlhost -e DJANGO_MYSQL_PASSW
 如果你没有mysql等基础服务，那么可以使用`docker-compose`来运行，
 具体命令如下所示:
 ```shell
+curl -fsSL https://get.docker.com | bash -s docker
+curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 docker-compose build
 docker-compose up -d
 ```
